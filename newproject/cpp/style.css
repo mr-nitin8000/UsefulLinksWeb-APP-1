@@ -1,0 +1,39 @@
+body {
+  background-color: black;
+  color: aliceblue;
+  text-align: center;
+}
+section {
+  background-color: rgb(70, 70, 70);
+  padding: 10px;
+}
+pre {
+  background-color: black;
+  text-align: left;
+  padding: 20px;
+  color: green;
+}
+.output {
+  color: wheat;
+}
+h5 {
+  background-color: rgb(227, 133, 11);
+  padding: 20px;
+}
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+a {
+  color: aqua;
+  text-decoration: none;
+}
+li {
+  background-color: blueviolet;
+  padding: 20px;
+}
+footer {
+  background-color: blueviolet;
+  padding: 20px;
+}

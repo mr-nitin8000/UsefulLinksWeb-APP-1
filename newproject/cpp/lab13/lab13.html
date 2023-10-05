@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cpp programs</title>
+  </head>
+  <body>
+    <section>
+      <h3>LAB 13</h3>
+      <h3>FILE HANDLING</h3>
+      <h4>READ OR WRITE IN FILE</h4>
+      <pre>
+        <code>
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main()
+{
+
+    ofstream outf, outf1;
+    outf.open("File1");
+    outf << "this is my fun file1!!" << endl;
+    outf1.open("File2");
+    outf1 << "this is my fun file2!!" << endl;
+    ifstream inf, inf1;
+    inf.open("File1");
+    char b[50];
+    while (inf)
+    {
+        inf.getline(b, 50);
+        cout << b << endl;
+    }
+    inf1.open("File2");
+    char c[50];
+    while (inf1)
+    {
+        inf1.getline(c, 50);
+        cout << c << endl;
+    }
+    inf.close();
+    inf1.close();
+    outf1.close();
+    outf.close();
+}
+        </code>
+      </pre>
+      <h5>OUTPUT</h5>
+      <pre class="output">
+        <code>
+this is my fun file1!!
+
+this is my fun file2!!
+   
+        </code>
+      </pre>
+    </section>
+    <section>
+        <footer>
+            MADE BY MR.LUCKYYY
+        </footer>
+    </section>
+  </body>
+  <link rel="stylesheet" href="/style.css">
+</html>

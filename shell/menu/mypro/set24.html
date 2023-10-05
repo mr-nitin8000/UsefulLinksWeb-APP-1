@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cpp programs</title>
+  </head>
+  <body>
+    <section>
+      <h3>Set 24</h3>
+      <h3>prog 1 </h3>
+      <pre>
+        <code>
+#include <stdio.h>
+#include <stdlib.h>
+struct node
+{
+    int data;           // node will store some data
+    struct node *right; // right child
+    struct node *left;  // left child
+};
+
+// function to create a node
+struct node *new_node(int x)
+{
+    struct node *temp;
+    temp = malloc(sizeof(struct node));
+    temp->data = x;
+    temp->left = NULL;
+    temp->right = NULL;
+
+    return temp;
+}
+struct node *insert(struct node *root, int x)
+{
+    // searching for the place to insert
+    if (root == NULL)
+        return new_node(x);
+    else if (x > root->data) // x is greater. Should be inserted to the right
+        root->right = insert(root->right, x);
+    else // x is smaller and should be inserted to left
+        root->left = insert(root->left, x);
+    return root;
+}
+void inorder(struct node *root)
+{
+    if (root != NULL) // checking if the root is not null
+    {
+        inorder(root->left);        // traversing left child
+        printf(" %d ", root->data); // printing data at root
+        inorder(root->right);       // traversing right child
+    }
+}
+int main()
+{
+    struct node *root;
+    root = new_node(20);
+    insert(root, 5);
+    insert(root, 1);
+    insert(root, 15);
+    insert(root, 9);
+    insert(root, 7);
+    insert(root, 12);
+    insert(root, 30);
+    insert(root, 25);
+    insert(root, 40);
+    insert(root, 45);
+    insert(root, 42);
+
+    inorder(root);
+    printf("\n");
+}
+        </code>
+      </pre>
+      <h5>OUTPUT</h5>
+      <pre class="output">
+        <code>
+1  5  7  9  12  15  20  25  30  40  42  45 
+        </code>
+      </pre>
+    </section>
+    <section>
+      <h3>ALgorithm pop an element ctrl+z</h3>
+      <pre>
+        <code>
+Step 1: IF TOP = NULL
+PRINT UNDERFLOW
+[END OF IF]
+Goto Step 4
+Step 2: SET VAL = STACK[TOP]
+Step 3: SET TOP = TOP-1
+Step 4: END
+        </code>
+      </pre>
+      
+    </section>
+  </body>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    body {
+  background-color: black;
+  color: aliceblue;
+  text-align: center;
+}
+section {
+  background-color: rgb(70, 70, 70);
+  padding: 10px;
+}
+pre {
+  background-color: black;
+  text-align: left;
+  padding: 20px;
+  color: green;
+}
+.output {
+  color: wheat;
+}
+h5 {
+  background-color: rgb(227, 133, 11);
+  padding: 20px;
+}
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+a {
+  color: aqua;
+  text-decoration: none;
+}
+li {
+  background-color: blueviolet;
+  padding: 20px;
+}
+footer {
+  background-color: blueviolet;
+  padding: 20px;
+}
+
+  </style>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cpp programs</title>
+  </head>
+  <body>
+    <section>
+      <h3>LAB 14</h3>
+      <h3>EXCEPTION HANDLING</h3>
+      <h4>DIVIDE BY ZERO PROGRAM</h4>
+      <pre>
+        <code>
+// Exception handling
+#include <iostream>
+using namespace std;
+void prog1(double a, double b)
+{
+    cout << "Divide By Zero problem\n"
+         << endl;
+    try
+    {
+        if (b != 0)
+        {
+            cout << "RESULT: " << a / b << endl;
+        }
+        else
+        {
+            throw b;
+        }
+    }
+    catch (double e)
+    {
+        cout << "EXCEPTION CATCH: " << e << endl;
+    }
+    cout << "END OF THE PROGRAM!!!\n";
+}
+main()
+{
+    prog1(8.9, 7.5);
+    prog1(4.65, 0.0);
+}
+
+        </code>
+      </pre>
+      <h5>OUTPUT</h5>
+      <pre class="output">
+        <code>
+Divide By Zero problem
+
+RESULT: 1.18667
+END OF THE PROGRAM!!!
+Divide By Zero problem
+
+EXCEPTION CATCH: 0
+END OF THE PROGRAM!!!    
+        </code>
+      </pre>
+    </section>
+    <section>
+        <footer>
+            MADE BY MR.LUCKYYY
+        </footer>
+    </section>
+  </body>
+  <link rel="stylesheet" href="/style.css">
+</html>

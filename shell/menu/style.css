@@ -1,0 +1,126 @@
+a {
+  text-decoration: none;
+  color: #fff;
+}
+div {
+  position: sticky;
+}
+img {
+  margin-top: 10px;
+  height: 100px;
+}
+@import url(https://fonts.googleapis.com/css?family=Lato);
+body {
+  font-family: "Michroma", sans-serif;
+  /* font-family: "Sono", sans-serif; */
+  /* font-family: "Lato", sans-serif; */
+  background: rgb(0, 0, 0);
+  color: #fff;
+  text-align: center;
+}
+
+ul {
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  margin-top: 25px;
+  margin-left: -150px;
+}
+
+li {
+  background-color: rgba(10, 46, 13, 0.603);
+  position: relative;
+  display: block;
+  border: 1px solid rgb(21, 255, 0);
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-animation: fadeIn 0.5s linear;
+  animation: fadeIn 0.5s linear;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  border-radius: 4px;
+}
+LI:hover {
+  background-color: rgba(11, 34, 8, 0.596);
+}
+
+li:nth-child(1) {
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+}
+
+li:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+li:nth-child(3) {
+  -webkit-animation-delay: 0.75s;
+  animation-delay: 0.75s;
+}
+
+li:nth-child(4) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+li:nth-child(5) {
+  -webkit-animation-delay: 1.25s;
+  animation-delay: 1.25s;
+}
+li:nth-child(6) {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+li:nth-child(7) {
+  -webkit-animation-delay: 1.75s;
+  animation-delay: 1.75s;
+}
+li:nth-child(8) {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+li:nth-child(9) {
+  -webkit-animation-delay: 2.25s;
+  animation-delay: 2.25s;
+}
+li:nth-child(10) {
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+li:nth-child(11) {
+  -webkit-animation-delay: 2.75s;
+  animation-delay: 2.75s;
+}
+li:nth-child(12) {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+li:nth-child(13) {
+  -webkit-animation-delay: 3.25s;
+  animation-delay: 3.25s;
+}
+li:nth-child(14) {
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+}
+li:nth-child(15) {
+  -webkit-animation-delay: 3.75s;
+  animation-delay: 3.75s;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: 100px;
+  }
+  75% {
+    opacity: 0.5;
+    top: 0px;
+  }
+  100% {
+    opacity: 1;
+  }
+}

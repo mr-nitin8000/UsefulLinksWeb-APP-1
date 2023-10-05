@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cpp programs</title>
+  </head>
+  <body>
+    <section>
+      <h3>Set 23</h3>
+      <h3>prog 1</h3>
+      <pre>
+        <code>
+#include <stdio.h>
+int main()
+{
+    int arr[5] = {23, 5, 45, 3, 12};
+    int n = 5;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d\t", arr[i]);
+    }
+}
+        </code>
+      </pre>
+      <h5>OUTPUT</h5>
+      <pre class="output">
+        <code>
+3       5       12      23      45 
+        </code>
+      </pre>
+    </section>
+    <section>
+      <h3>ALgorithm delete a node</h3>
+      <pre>
+        <code>
+struct node *delete_beg(struct node *start)
+{
+    struct node *ptr;
+    if (start == NULL)
+    {
+        printf("UNDER FLOW!!!!\n");
+        return start;
+    }
+    ptr = start;
+    start = start->next;
+    free(ptr);
+    return start;
+}
+struct node *delete_node(struct node *start)
+{
+    struct node *ptr, *preptr;
+    int val;
+    printf("\nEnter the value of the node which has to be delete: ");
+    scanf("%d", &val);
+    ptr = start;
+    if (ptr->data == val)
+    {
+        start = delete_beg(start);
+        return start;
+    }
+    else
+    {
+        while (ptr->data != val)
+        {
+            preptr = ptr;
+            ptr = ptr->next;
+        }
+    }
+    preptr->next = ptr->next;
+    free(ptr);
+    return start;
+}
+        </code>
+      </pre>
+      
+    </section>
+  </body>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    body {
+  background-color: black;
+  color: aliceblue;
+  text-align: center;
+}
+section {
+  background-color: rgb(70, 70, 70);
+  padding: 10px;
+}
+pre {
+  background-color: black;
+  text-align: left;
+  padding: 20px;
+  color: green;
+}
+.output {
+  color: wheat;
+}
+h5 {
+  background-color: rgb(227, 133, 11);
+  padding: 20px;
+}
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+a {
+  color: aqua;
+  text-decoration: none;
+}
+li {
+  background-color: blueviolet;
+  padding: 20px;
+}
+footer {
+  background-color: blueviolet;
+  padding: 20px;
+}
+
+  </style>
+</html>
